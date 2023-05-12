@@ -8,15 +8,38 @@
     <style>
         /*型態選擇器*/
         span{color:green;}
-        /*Class選擇器*/
+
+        /*Class選擇器 (使用.符號)*/
         .one{font-size: 28px;}
         .two{color:red;}
+
         /*id選擇器(使用#符號)*/
         #one{color: brown;}
+
         /*通用選擇器(使用*符號)*/
         *{font-family: 標楷體;}
+
         /*屬性選擇器*/
         input[type="button"]{background-color: aqua;}
+
+        /*後代選擇器(使用空格符號)*/
+        .div1 a{color: gold;}
+
+        /*子選擇器(使用>符號)*/
+        .div2>a{color: fuchsia;}
+
+        /*同層相鄰選擇器(使用+符號)、同層全體選擇器(使用~符號)*/
+        ul+p{color: chartreuse;}
+        ul~p{color: darkorange;}
+
+        /*偽類選擇器(使用:符號)*/
+        #a1:hover{color: forestgreen;}
+
+        /*偽元素選擇器(使用::符號)*/
+        #div2::after{content: "(使用::符號)";}
+
+        /*群組選擇器(使用,符號)*/
+        #div3,#div4{color: peru; font-size: 30px;}
     </style>
 </head>
 <body>
@@ -34,5 +57,53 @@
     <hr>
     <h2>屬性選擇器</h2>
     <input type="button" value="屬性選擇器">
+    <hr>
+    <h2>後代選擇器(使用空格符號)</h2>
+    <div class="div1">
+        <p>
+            <a href="#">div->p->a</a>
+        </p>
+    </div>
+    <div class="div1">
+        <a href="#">div->a</a>
+    </div>
+    <hr>
+    <h2>子選擇器(使用>符號)</h2>
+    <div class="div2">
+        <p>
+            <a href="#">div->p->a</a>
+        </p>
+    </div>
+    <div class="div2">
+        <a href="#">div->a</a>
+    </div>
+    <hr>
+    <h2>同層相鄰選擇器(使用+符號)、同層全體選擇器(使用~符號)</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <p>P1</p>
+    <p>P2</p>
+    <p>P3</p>
+    <ul>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <p>P4</p>
+    <p>P5</p>
+    <p>P6</p>
+    <hr>
+    <h2>偽類選擇器(使用:符號)</h2>
+    <a href="#" id="a1">偽類選擇器</a>
+    <hr>
+    <h2>偽元素選擇器(使用::符號)</h2>
+    <div id="div2">偽元素選擇器</div>
+    <hr>
+    <h2>群組選擇器(使用,符號)</h2>
+    <div id="div3">div3</div>
+    <div id="div4">div4</div>
 </body>
 </html>
